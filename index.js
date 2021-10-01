@@ -10,12 +10,8 @@ async function run() {
       })
       .map((path) => ({
         files: path,
-        from: /jcenter\(\)/g,
-        to: readFileSync(path)
-          .toString()
-          .match(/mavenCentral\(\)/)?.length
-          ? ""
-          : "mavenCentral()",
+        from: [/mavenCentral\(\)/g, /jcenter\(\)/g],
+        to: ["", "mavenCentral()"],
       }))
       .map((options) => replacer.replaceInFile(options))
   );

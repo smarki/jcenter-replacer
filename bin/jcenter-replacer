@@ -3,6 +3,8 @@
 var fs = require("fs");
 const path = require("path");
 
+console.log("[jecenter-replacer] Starting execution.");
+
 const potentialPaths = [
   path.join(__dirname, "../jcenter-replacer/index.js"),
   path.join(__dirname, "../../jcenter-replacer/index.js"),
