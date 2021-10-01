@@ -1,4 +1,3 @@
-const { readFileSync } = require("fs-extra");
 const fg = require("fast-glob");
 const replacer = require("replace-in-file");
 
@@ -10,8 +9,8 @@ async function run() {
       })
       .map((path) => ({
         files: path,
-        from: [/mavenCentral\(\)/g, /jcenter\(\)/g],
-        to: ["", "mavenCentral()"],
+        from: [/jcenter\(\)/g],
+        to: ["mavenCentral()"],
       }))
       .map((options) => replacer.replaceInFile(options))
   );
