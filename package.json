@@ -1,6 +1,6 @@
 {
   "name": "jcenter-replacer",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Replaces all jcenter() occurences with mavenCentral()",
   "main": "index.js",
   "bin": "./bin/jcenter-replacer",
