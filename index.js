@@ -4,7 +4,7 @@ const replacer = require("replace-in-file");
 async function run() {
   return Promise.all(
     fg
-      .sync(["**/build.gradle"], {
+      .sync(["/node_modules/**/build.gradle"], {
         onlyFiles: true,
       })
       .map((path) => ({
